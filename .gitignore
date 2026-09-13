@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OpenCV generated models
+trainer/*.yml
+
+# Captured face datasets
+dataset/
+dataset_augmented/
+dataset_blur/
+
+# Test datasets
+test_dataset/
+
+# Runtime files
+*.log
+
+# macOS
+.DS_Store
+backend/trainer/*.yml

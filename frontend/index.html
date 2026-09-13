@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI-Powered Workplace Monitoring System</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+
+        <h1>AI-Powered Workplace Monitoring System</h1>
+
+        <p>
+            Face Recognition, Attendance, Robustness and Model Evaluation
+        </p>
+
+    </div>
+
+
+    <div class="container">
+
+
+        <!-- Employee Management -->
+        <div class="card">
+
+            <h2>Employee Management</h2>
+
+            <form action="/add_employee" method="POST">
+
+                <input
+                    type="text"
+                    name="employee_id"
+                    placeholder="Employee ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="employee_name"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <button type="submit">
+                    Add Employee
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Attendance -->
+        <div class="card">
+
+            <h2>Attendance Settings</h2>
+
+            <form action="/attendance" method="POST">
+
+                <input
+                    type="number"
+                    name="session_minutes"
+                    placeholder="Session duration (minutes)"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="number"
+                    name="required_percentage"
+                    placeholder="Required attendance (%)"
+                    min="1"
+                    max="100"
+                    required
+                >
+
+                <button type="submit">
+                    Start Attendance
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- System Controls -->
+        <div class="card">
+
+            <h2>System Controls</h2>
+
+            <a href="/recognition">
+                <button type="button">
+                    Start Face Recognition
+                </button>
+            </a>
+
+            <a href="/train">
+                <button type="button">
+                    Train Model
+                </button>
+            </a>
+
+            <a href="/results">
+                <button type="button">
+                    View Results
+                </button>
+            </a>
+
+        </div>
+
+
+        <!-- System Status -->
+        <div class="card">
+
+            <h2>System Status</h2>
+
+            <p id="status">
+                System is ready
+            </p>
+
+        </div>
+
+
+        <!-- Registered Employees -->
+        <div class="card">
+
+            <h2>Registered Employees</h2>
+
+            {% if employees %}
+
+            <table>
+
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                </tr>
+
+                {% for employee_id, employee_name in employees.items() %}
+
+                <tr>
+                    <td>{{ employee_id }}</td>
+                    <td>{{ employee_name }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+            {% else %}
+
+            <p>No employees registered.</p>
+
+            {% endif %}
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

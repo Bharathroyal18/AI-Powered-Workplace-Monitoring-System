@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Evaluation Results</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>Model Evaluation Results</h1>
+
+        <p>
+            AI-Powered Workplace Monitoring System
+        </p>
+
+    </div>
+
+
+    <div class="container">
+
+
+        <!-- Overall Accuracy -->
+
+        <div class="card">
+
+            <h2>Overall Model Accuracy</h2>
+
+            <p>
+                Employee 101:
+                <b>100%</b>
+            </p>
+
+            <p>
+                Employee 103:
+                <b>95%</b>
+            </p>
+
+            <p>
+                Overall Test Accuracy:
+                <b>97.5%</b>
+            </p>
+
+        </div>
+
+
+        <!-- Robustness -->
+
+        <div class="card">
+
+            <h2>Robustness Testing</h2>
+
+            <table>
+
+                <tr>
+                    <th>Test</th>
+                    <th>Accuracy</th>
+                </tr>
+
+                <tr>
+                    <td>Brightness</td>
+                    <td>97.5%</td>
+                </tr>
+
+                <tr>
+                    <td>Blur - Baseline Model</td>
+                    <td>47.5%</td>
+                </tr>
+
+                <tr>
+                    <td>Blur - Improved Model</td>
+                    <td><b>100%</b></td>
+                </tr>
+
+                <tr>
+                    <td>Occlusion</td>
+                    <td>97.5%</td>
+                </tr>
+
+                <tr>
+                    <td>Camera Motion</td>
+                    <td>97.5%</td>
+                </tr>
+
+            </table>
+
+            <p>
+                The baseline model achieved 47.5% accuracy
+                under strong blur. After blur-based data
+                augmentation and retraining, the improved
+                model achieved 100% accuracy.
+            </p>
+
+        </div>
+
+
+        <!-- Per Employee Results -->
+
+        <div class="card">
+
+            <h2>Per-Employee Performance</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Employee ID</th>
+
+                    <th>Normal</th>
+
+                    <th>Brightness</th>
+
+                    <th>Blur - Baseline</th>
+
+                    <th>Blur - Improved</th>
+
+                    <th>Occlusion</th>
+
+                    <th>Camera Motion</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>101</td>
+
+                    <td>100%</td>
+
+                    <td>100%</td>
+
+                    <td>0%</td>
+
+                    <td><b>100%</b></td>
+
+                    <td>100%</td>
+
+                    <td>100%</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>103</td>
+
+                    <td>95%</td>
+
+                    <td>95%</td>
+
+                    <td>95%</td>
+
+                    <td><b>100%</b></td>
+
+                    <td>95%</td>
+
+                    <td>95%</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- Precision Recall F1 -->
+
+        <div class="card">
+
+            <h2>Precision, Recall and F1-Score</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Employee ID</th>
+
+                    <th>Precision</th>
+
+                    <th>Recall</th>
+
+                    <th>F1-Score</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>101</td>
+
+                    <td>100%</td>
+
+                    <td>100%</td>
+
+                    <td>100%</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>103</td>
+
+                    <td>100%</td>
+
+                    <td>95%</td>
+
+                    <td>97.44%</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- Fairness -->
+
+        <div class="card">
+
+            <h2>Fairness / Consistency</h2>
+
+            <p>
+
+                Best User Accuracy:
+                <b>100%</b>
+
+            </p>
+
+            <p>
+
+                Worst User Accuracy:
+                <b>95%</b>
+
+            </p>
+
+            <p>
+
+                Consistency Gap:
+                <b>5 percentage points</b>
+
+            </p>
+
+            <p>
+
+                The fairness evaluation was performed
+                using the same held-out test dataset.
+                The measured consistency gap was
+                5 percentage points.
+
+            </p>
+
+        </div>
+
+
+        <!-- Blur Improvement -->
+
+        <div class="card">
+
+            <h2>Blur Robustness Improvement</h2>
+
+            <p>
+
+                Baseline Blur Accuracy:
+                <b>47.5%</b>
+
+            </p>
+
+            <p>
+
+                Improved Blur Accuracy:
+                <b>100%</b>
+
+            </p>
+
+            <p>
+
+                Improvement:
+                <b>52.5 percentage points</b>
+
+            </p>
+
+            <p>
+
+                Blur-based training augmentation was used
+                to improve recognition under strong blur.
+                Normal-test accuracy remained unchanged.
+
+            </p>
+
+        </div>
+
+
+        <!-- Response Time -->
+
+        <div class="card">
+
+            <h2>Response Time Performance</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Metric</th>
+
+                    <th>Result</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Samples</td>
+
+                    <td>177</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Average Processing Response Time</td>
+
+                    <td>27.8 ms</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Minimum Response Time</td>
+
+                    <td>23.43 ms</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Maximum Response Time</td>
+
+                    <td>66.02 ms</td>
+
+                </tr>
+
+            </table>
+
+            <p>
+
+                Response time represents the measured
+                face detection and LBPH recognition
+                processing time.
+
+            </p>
+
+        </div>
+
+
+        <!-- Attendance -->
+
+        <div class="card">
+
+            <h2>Attendance System</h2>
+
+            <p>
+
+                The attendance system supports
+                configurable session duration and
+                required attendance percentage.
+
+            </p>
+
+            <p>
+
+                Example:
+                A 120-minute session with a 75%
+                requirement needs 90 minutes of
+                recognized presence.
+
+            </p>
+
+            <p>
+
+                <b>PRESENT:</b>
+                Employee meets or exceeds the
+                required attendance percentage.
+
+            </p>
+
+            <p>
+
+                <b>ABSENT:</b>
+                Employee is below the required
+                attendance percentage.
+
+            </p>
+
+        </div>
+
+
+        <!-- System Summary -->
+
+        <div class="card">
+
+            <h2>System Summary</h2>
+
+            <p>
+                ✓ Face Detection
+            </p>
+
+            <p>
+                ✓ LBPH Face Recognition
+            </p>
+
+            <p>
+                ✓ Time-Based Attendance
+            </p>
+
+            <p>
+                ✓ Robustness Testing
+            </p>
+
+            <p>
+                ✓ Blur Robustness Improvement
+            </p>
+
+            <p>
+                ✓ Per-Employee Evaluation
+            </p>
+
+            <p>
+                ✓ Fairness Evaluation
+            </p>
+
+            <p>
+                ✓ Precision, Recall and F1 Evaluation
+            </p>
+
+            <p>
+                ✓ Response-Time Measurement
+            </p>
+
+            <p>
+                ✓ Web Dashboard
+            </p>
+
+        </div>
+
+
+        <!-- Back Button -->
+
+        <br>
+
+        <a href="/">
+
+            <button type="button">
+                Back to Dashboard
+            </button>
+
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>
