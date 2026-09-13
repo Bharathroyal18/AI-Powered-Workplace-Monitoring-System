@@ -80,4 +80,3 @@ AI-Powered-Workplace-Monitoring-System/
 │   └── style.css
 │
 ├── README.md
-└── venv/
